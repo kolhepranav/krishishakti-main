@@ -89,7 +89,7 @@ export default function CropPredictionForm() {
         console.error("Error during fetch operation:", error);
       });
 
-    router.push('/krishibhavishya/predictions/crop');
+    router.push('/dashboard/krishibhavishya/predictions/crop');
   };
 
   return (

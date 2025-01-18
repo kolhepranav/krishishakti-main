@@ -4,6 +4,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import Loading from '@/components/custom/loading';
 
 const CropPredictions = () => {
   const [crop, setCrop] = useState({});
@@ -134,7 +135,7 @@ const CropPredictions = () => {
       <h1 className="text-3xl font-bold mb-6">Crop Recommendations & Yield Analysis</h1>
       
       <ScrollArea className="h-[650px] w-full rounded-md border p-4">
-      {parsedOutput && (
+      {parsedOutput ? (
         <div className="space-y-6">
           {/* Summary Card */}
           <Card className="p-6 bg-gradient-to-r from-green-50 to-blue-50 border-green-200">
@@ -220,7 +221,7 @@ const CropPredictions = () => {
             </ul>
           </Card>
         </div>
-      )}
+      ) : <Loading />}
       </ScrollArea>
     </div>
   );

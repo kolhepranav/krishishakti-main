@@ -1,18 +1,4 @@
-// Sidebar imports
-import {
-    UilEstate,
-    UilClipboardAlt,
-    UilUsersAlt,
-    UilPackage,
-    UilChart,
-    UilSignOutAlt,
-    UilHeartRate,
-    UilBed,
-    // UisAlignCenter,
-  } from "@iconscout/react-unicons";
-
-
-  import { IoHomeOutline } from "react-icons/io5";
+import { IoHomeOutline } from "react-icons/io5";
   import { HeartPulse } from 'lucide-react';
   import { SiSimpleanalytics } from "react-icons/si";
   import { MdOutlineHealthAndSafety } from "react-icons/md";
@@ -23,121 +9,8 @@ import {
   import { PiPlant } from "react-icons/pi";
   import { IoAnalytics } from "react-icons/io5";
 
-
-
-
-
-
-
-
   // Analytics Cards imports
 import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
-// import { keyboard } from "@testing-library/user-event/dist/keyboard";
-
-// Recent Card Imports
-import img1 from "../public/assets/imgs/img1.png";
-import img2 from "../public/assets/imgs/img2.png";
-import img3 from "../public/assets/imgs/img3.png";
-
-
-
-const img1use = img1.src;
-const img2use = img2.src;
-const img3use = img3.src;
-
-  // Sidebar Data
-export const SidebarData = [
-    {
-      icon: IoHomeOutline,
-      heading: "Home",
-      title:"Home",
-    },
-    {
-      icon: SiSimpleanalytics,
-      // icon: IoHomeOutline,
-      heading: "krishiBhavishya",
-      title:"Krishi Bhavishya",
-    },
-    {
-      icon: MdOutlineHealthAndSafety,
-      heading: "KrishiRakshak",
-      title:"Krishi Raksha",
-    },
-    {
-      icon: MdManageHistory,
-      heading: 'KrishiNiyojak/budgets',
-      title:"Krishi Niyojak",
-    },
-    // {
-    //   icon: UilChart,
-    //   heading: 'Analytics'
-    // },
-  ];
-
-
-
-//   // Analytics Cards Data
-
-// export const cardsData = [
-//   {
-//     title: "Market",
-//     key:1,
-//     color: {
-//       backGround: "linear-gradient(180deg, #bb67ff 0%, #c484f3 100%)",
-//       boxShadow: "0px 10px 20px 0px #e0c6f5",
-//     },
-//     barValue: 90,
-//     value: "Blood Pressure: 120/80 mmHg",
-//     png:   HeartPulse, // Assuming you have a heart rate icon
-//     series: [
-//       {
-//         name: "Vital Signs",
-//         data: [120, 118, 115, 121, 119, 117, 120], // Example data for systolic BP readings
-//       },
-//     ],
-//   },
-//   {
-//     title: "Metabolic Health",
-//     key:2,
-//     color: {
-//       backGround: "linear-gradient(180deg, #FF919D 0%, #FC929D 100%)",
-//       boxShadow: "0px 10px 20px 0px #FDC0C7",
-//     },
-//     barValue: 70,
-//     value: "Cholesterol: 190 mg/dL",
-//     png: TbHeartRateMonitor, // Assuming a medical icon
-//     series: [
-//       {
-//         name: "Cholesterol",
-//         data: [190, 195, 185, 180, 195, 200, 190], // Example cholesterol level data
-//       },
-//     ],
-//   },
-
-//   {
-//     title: "Sleep Quality",
-//     color: {
-//       backGround:
-//         "linear-gradient(rgb(248, 212, 154) -146.42%, rgb(255 202 113) -46.42%)",
-//       boxShadow: "0px 10px 20px 0px #F9D59B",
-//     },
-//     key:3,
-//     barValue: 75,
-//     value: "Sleep: 7.5 Hours",
-//     png: FaBedPulse, // Assuming a bed or sleep icon
-//     series: [
-//       {
-//         name: "Sleep Patterns",
-//         data: [7, 6.5, 8, 7.5, 6, 7, 7.5], // Example sleep hours over a week
-//       },
-//     ],
-//   },
-
-
-
-
-// ];
-
 
 
 export const cardsData = [
@@ -214,36 +87,5 @@ export const cardsData = [
         data: [300, 320, 340, 330, 350, 360, 370], // Profit in thousands
       },
     ],
-  },
-];
-
-
-
-
-
-
-
-
-
-
-  // Recent Update Card Data
-export const UpdatesData = [
-  {
-    img: img1use,
-    name: "Andrew Thomas",
-    noti: "has ordered Apple smart watch 2500mh battery.",
-    time: "25 seconds ago",
-  },
-  {
-    img: img2use,
-    name: "James Bond",
-    noti: "has received Samsung gadget for charging battery.",
-    time: "30 minutes ago",
-  },
-  {
-    img: img3use,
-    name: "Iron Man",
-    noti: "has ordered Apple smart watch, samsung Gear 2500mh battery.",
-    time: "2 hours ago",
   },
 ];
