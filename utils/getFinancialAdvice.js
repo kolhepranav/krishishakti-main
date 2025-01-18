@@ -12,10 +12,10 @@ const getFinancialAdvice = async (totalBudget, totalIncome, totalSpend) => {
   try {
     const prompt = `
       Based on the following financial data:
-      - Total Budget: ${totalBudget} USD 
-      - Expenses: ${totalSpend} USD 
-      - Incomes: ${totalIncome} USD
-      Provide detailed financial advice in 2 sentences to help the user manage their finances more effectively.
+      - Total Budget: ${totalBudget} INR
+      - Expenses: ${totalSpend} INR
+      - Incomes: ${totalIncome} INR
+      Provide detailed financial advice in 2 sentences to help the user manage their finances more effectively the user is a farmer.
     `;
 
     // Load the Gemini AI model (gemini-1.5-flash is used here)

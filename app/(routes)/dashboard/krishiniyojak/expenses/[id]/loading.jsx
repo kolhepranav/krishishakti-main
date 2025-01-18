@@ -1,8 +1,11 @@
+import Loading from '@/components/custom/loading'
 import React from 'react'
 
 function loading() {
   return (
-    <div>loading</div>
+    <div>
+      <Loading />
+    </div>
   )
 }
 

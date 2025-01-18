@@ -82,7 +82,7 @@ function ExpensesScreen({ params }) {
         .returning();
     }
     toast("Budget Deleted !");
-    route.replace("/dashboard/budgets");
+    route.replace("/dashboard/krishiniyojak/budgets");
   };
 
   return (
