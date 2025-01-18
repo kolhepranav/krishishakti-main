@@ -4,7 +4,7 @@
       <img src="https://i.postimg.cc/tJsYLQcP/test1.jpg" alt="Project Banner">
     </a>
   
-  <br />
+  <br  />
 
   <div>
     <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
