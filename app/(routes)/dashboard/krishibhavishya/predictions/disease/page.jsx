@@ -7,11 +7,15 @@ import { Card } from '@/components/ui/card';
 import Link from 'next/link';
 import { Badge } from "@/components/ui/badge";
 import Loading from '@/components/custom/loading';
+import { useUser } from '@clerk/nextjs';
 
 const PlantDiseasePrediction = () => {
   const [disease, setDisease] = useState('');
   const [parsedOutput, setParsedOutput] = useState(null);
   const [diseaseDatamain, setDiseaseDatamain] = useState('');
+
+  const user = useUser();
+  const userid = user?.id;
 
   // Initialize the Gemini API
   const GEMINI_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
@@ -21,7 +25,7 @@ const PlantDiseasePrediction = () => {
   // Fetch plant disease prediction data on component mount
   useEffect(() => {
     const formData = new FormData();
-    formData.append("username", JSON.stringify("temp2"));
+    formData.append("username", JSON.stringify(userid));
 
     fetch("http://127.0.0.1:8000/getPredictedDisease", {
       method: "POST",

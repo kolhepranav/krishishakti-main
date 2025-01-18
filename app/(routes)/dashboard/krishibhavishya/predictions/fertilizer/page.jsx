@@ -6,12 +6,15 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent } from "@/components/ui/card";
+import { useUser } from '@clerk/nextjs';
 
 const FertilizerRecommendationForm = () => {
   const [fertilizer, setFertilizer] = useState('');
   const [enhancedOutput, setEnhancedOutput] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
+  const user = useUser();
+  const userid = user?.id;
 
   // Initialize the Gemini API
   const GEMINI_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
@@ -34,7 +37,7 @@ const FertilizerRecommendationForm = () => {
   const fetchFertilizerData = async () => {
     setIsLoading(true);
     const formData = new FormData();
-    formData.append("username", JSON.stringify("temp2"));
+    formData.append("username", JSON.stringify(userid));
 
     try {
       const response = await fetch("http://127.0.0.1:8000/getPredictedFertilizers", {

@@ -24,6 +24,7 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { useUser } from "@clerk/nextjs";
 
 // Define the crops you want to include
 const cropOptions = [
@@ -73,13 +74,16 @@ export default function FertilizerRecommendationForm() {
     mode: "onChange",
   });
 
+  const user = useUser();
+  const userid = user?.id;
+
   const onSubmit = (data) => {
     const formData = new FormData();
     formData.append("n", JSON.stringify(data.nitrogen));
     formData.append("p", JSON.stringify(data.phosphorous));
     formData.append("k", JSON.stringify(data.potassium));
     formData.append("crop", JSON.stringify(data.crop.toLowerCase()));
-    formData.append("username", JSON.stringify("temp2"));
+    formData.append("username", JSON.stringify(userid));
    
     console.log(data)
     fetch("http://127.0.0.1:8000/predictFertilizer", {

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner"; // Assuming you're using Sonner for toast notifications
 import { useRouter } from "next/navigation";
+import { useUser } from "@clerk/nextjs";
 
 export default function PlantDiseasePrediction() {
   const [files, setFiles] = useState([]);
@@ -14,6 +15,8 @@ export default function PlantDiseasePrediction() {
   const [predictionResults, setPredictionResults] = useState("");
 
   const router = useRouter();
+  const user = useUser();
+  const userid = user?.id;
 
   const handleFileUpload = (uploadedFiles) => {
     setFiles(uploadedFiles);
@@ -34,7 +37,7 @@ export default function PlantDiseasePrediction() {
       // For demonstration purposes, let's assume we get some dummy results
       const formData = new FormData();
       formData.append("image", files[0]);
-      formData.append("username", JSON.stringify("temp2"));
+      formData.append("username", JSON.stringify(userid));
       fetch("http://127.0.0.1:8000/predictDisease", {
         method: "POST",
         body: formData,

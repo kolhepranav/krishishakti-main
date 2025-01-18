@@ -4,12 +4,13 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-
+import { useUser } from '@clerk/nextjs';
 const CropPredictions = () => {
   const [crop, setCrop] = useState({});
   const [yieldP, setYieldP] = useState({});
   const [parsedOutput, setParsedOutput] = useState(null);
-
+  const user = useUser();
+  const userid = user?.id;
   // Initialize the Gemini API
   const GEMINI_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
 
@@ -42,7 +43,7 @@ const CropPredictions = () => {
   // Use useEffect to fetch data only when the component mounts
   useEffect(() => {
     const formData = new FormData();
-    formData.append("username", JSON.stringify("temp2"));
+    formData.append("username", JSON.stringify(userid));
 
     // Fetch crop and yield predictions from the backend
     fetch("http://127.0.0.1:8000/getPredictedCrops", {

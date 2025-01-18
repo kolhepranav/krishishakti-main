@@ -12,6 +12,7 @@ import { toast } from 'sonner';
 import { Country, State, City } from "country-state-city";
 import { ScrollArea } from "@/components/ui/scroll-area"; // Import ScrollArea
 import { useRouter } from 'next/navigation';
+import { useUser } from '@clerk/nextjs';
 
 const cropFormSchema = z.object({
   nitrogen: z.string().min(1, { message: 'Required' }),
@@ -34,6 +35,8 @@ export default function CropPredictionForm() {
 
   const router = useRouter();
 
+  const user = useUser();
+  const userid = user?.id;
 
   const form = useForm({
     resolver: zodResolver(cropFormSchema),
@@ -70,7 +73,7 @@ export default function CropPredictionForm() {
     formData.append("crop_year", JSON.stringify(data.crop_year));
     formData.append("season", JSON.stringify(data.season));
     formData.append("area", JSON.stringify(data.area));
-    formData.append("username", JSON.stringify("temp2"));
+    formData.append("username", JSON.stringify(userid));
 
     fetch("http://127.0.0.1:8000/predictCrop", {
       method: "POST",
