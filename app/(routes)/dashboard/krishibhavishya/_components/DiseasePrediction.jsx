@@ -55,7 +55,7 @@ export default function PlantDiseasePrediction() {
           console.error("Error during fetch operation:", error);
   
         });
-        router.push('/krishibhavishya/predictions/disease');
+        router.push('/dashboard/krishibhavishya/predictions/disease');
       
       toast.success("Prediction completed successfully!");
     } catch (error) {

@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Link from 'next/link';
 import { Badge } from "@/components/ui/badge";
+import Loading from '@/components/custom/loading';
 
 const PlantDiseasePrediction = () => {
   const [disease, setDisease] = useState('');
@@ -112,21 +113,20 @@ const PlantDiseasePrediction = () => {
         <h1 className="text-2xl font-bold mb-4">Plant Disease Analysis Report</h1>
         
         <ScrollArea className="h-[70vh]">
-        {parsedOutput && (
+        {parsedOutput ? (
           <div className="space-y-6">
             {/* Disease Header */}
-            <div className="flex justify-between items-center">
-              <h2 className="text-xl font-semibold">{parsedOutput.diseaseName}</h2>
-              {console.log("parsed : ",parsedOutput.diseaseName)}
-              <Badge 
-                variant={parsedOutput.severity.level === "Critical" ? "destructive" : "outline"}
-                className="text-lg"
-              >
-                Severity: {parsedOutput.severity.level} ({parsedOutput.severity.score}/10)
-              </Badge>
+            <div className="flex justify-between items-center p-5">
+                <h2 className="text-xl font-semibold">{parsedOutput.diseaseName}</h2>
+                {console.log("parsed : ",parsedOutput.diseaseName)}
+                <Badge 
+                    className={`bg-${parsedOutput.severity.score <= 5 ? "green-500" : parsedOutput.severity.score <= 8 ? "yellow-500" : "red-500"} text-md`}
+                >
+                    Severity: {parsedOutput.severity.level} ({parsedOutput.severity.score}/10)
+                </Badge>
             </div>
 
-            {/* Summary Card */}
+            {/* /* Summary Card */}
             <Card className="p-4 bg-muted/50">
               <p className="text-lg">{parsedOutput.summary}</p>
             </Card>
@@ -174,10 +174,12 @@ const PlantDiseasePrediction = () => {
               </Card>
             </div>
 
-            <Link href={`/krishibhavishya/predictions/disease/plan?disease=${diseaseDatamain}`}>
+            <Link href={`/dashboard/krishibhavishya/predictions/disease/plan?disease=${diseaseDatamain}`}>
               <Button className="mt-4">View Detailed Treatment Plan</Button>
             </Link>
           </div>
+        ) : (
+            <Loading />
         )}
       </ScrollArea>
       </Card>

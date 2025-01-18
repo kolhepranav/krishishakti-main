@@ -100,7 +100,7 @@ export default function FertilizerRecommendationForm() {
         console.error("Error during fetch operation:", error);
 
       });
-      router.push('/krishibhavishya/predictions/fertilizer');
+      router.push('/dashboard/krishibhavishya/predictions/fertilizer');
   };
 
   return (
