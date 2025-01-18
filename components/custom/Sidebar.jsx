@@ -31,12 +31,6 @@ function Sidebar() {
       icon: ReceiptText,
       path: "/dashboard/krishiniyojak",
     },
-    // {
-    //   id: 5,
-    //   name: "Upgrade",
-    //   icon: ShieldCheck,
-    //   path: "/dashboard/upgrade",
-    // },
   ];
   const path = usePathname();
 
