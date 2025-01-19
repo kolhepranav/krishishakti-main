@@ -14,6 +14,7 @@ import MagicCard from "@/components/ui/magic-card";
 import Cards from "./_components/Cards/Cards";
 import { TractorIcon } from "lucide-react";
 import MagicUIComponent from "./_components/MagicUIComponent";
+import Loading from "@/components/custom/loading";
 
 const DashboardPage = () => {
   const { isLoaded, isSignedIn, user } = useUser();
@@ -26,13 +27,13 @@ const DashboardPage = () => {
   }, [isLoaded, isSignedIn, user]);
 
   if (!isLoaded) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 w-full gap-6 m-2 lg:p-8">
       <div className="flex flex-col md:col-span-1 xl:col-span-4 gap-6 w-full">
-        <div className="flex flex-col items-center justify-center w-full border border-border/60 rounded-xl py-6 md:py-8">
+        <div className="flex flex-col items-center justify-center w-full border border-border/60 transition-all hover:border-primary bg-gray-50 hover:shadow-md rounded-xl py-6 md:py-8">
           <div className="w-20 h-20 mx-auto">
             <Image
               src={userData?.imageUrl}
@@ -46,10 +47,10 @@ const DashboardPage = () => {
             {userData?.firstName} {userData?.lastName}
           </h4>
         </div>
-        <Card className="p-4">
+        <Card className="p-4 bg-gray-50 hover:shadow-md rounded-xl border hover:border-primary">
           <GoogleTranslate />
         </Card>
-        <Card>
+        <Card className="bg-gray-50 hover:shadow-md rounded-xl border hover:border-primary">
           <div className="grid grid-cols-1 w-full p-2 relative z-10">
             <MapComponent />
           </div>

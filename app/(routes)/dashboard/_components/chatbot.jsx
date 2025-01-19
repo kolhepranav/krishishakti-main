@@ -118,7 +118,7 @@ const Chatbot = () => {
   return (
     <>
     
-    <div className="max-w-full w-full  flex-grow mx-auto p-4 bg-green-50 rounded-lg shadow-lg ">
+    <div className="max-w-full w-full  flex-grow mx-auto p-4 bg-gray-50 rounded-lg shadow-md">
       <div className="flex flex-col md:flex-row gap-4">
         <div className="flex-grow">
           <div

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
-import { LayoutGrid, PiggyBank, ReceiptText, ShieldCheck, CircleDollarSign } from "lucide-react";
+import { LayoutGrid, PiggyBank, ReceiptText, ShieldCheck, CircleDollarSign, ChartNoAxesCombined } from "lucide-react";
 import { UserButton } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -16,13 +16,13 @@ function Sidebar() {
     {
       id: 2,
       name: "KrishiBhavishya",
-      icon: CircleDollarSign,
+      icon: ChartNoAxesCombined,
       path: "/dashboard/krishibhavishya",
     },
     {
       id: 3,
       name: "KrishiRakshak",
-      icon: PiggyBank,
+      icon: ShieldCheck,
       path: "/dashboard/krishirakshak",
     },
     {
