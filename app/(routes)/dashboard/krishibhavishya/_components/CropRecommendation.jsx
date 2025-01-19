@@ -95,7 +95,7 @@ export default function CropPredictionForm() {
   return (
     <ScrollArea className="h-[600px] w-full rounded-md border p-4"> {/* Adjust height and width as needed */}
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 grid grid-cols-1 md:grid-cols-2 gap-6 p-2">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 grid grid-cols-1 md:grid-cols-1 gap-4 p-2">
           {/* Form fields for nitrogen, phosphorous, potassium, etc. */}
           <FormField control={form.control} name="nitrogen" render={({ field }) => (
             <FormItem>
