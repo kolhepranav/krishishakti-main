@@ -94,7 +94,7 @@ export default function FertilizerRecommendationForm() {
         return response.json();
       })
       .then((data) => {
-        alert(data.fertilizer);
+        // alert(data.fertilizer);
       })
       .catch((error) => {
         console.error("Error during fetch operation:", error);

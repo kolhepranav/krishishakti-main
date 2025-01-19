@@ -10,10 +10,10 @@ const Card = dynamic(() => import("../Card/Card"), {
 
 const Cards = () => {
   return (
-    <div className="Cards">
+    <div className="Cards ">
       {cardsData.map((card, index) => {
         return (
-          <div className="parentContainer" key={index}>
+          <div className="parentContainer " key={index}>
             <Card
               title={card.title}
               color={card.color}

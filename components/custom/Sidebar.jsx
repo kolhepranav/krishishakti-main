@@ -41,8 +41,8 @@ function Sidebar() {
   return (
     <div className="h-screen p-5 border shadow-sm">
       <div className="flex flex-row items-center">
-        <Image src={"./chart-donut.svg"} alt="logo" width={40} height={25} />
-        <span className="text-blue-800 font-bold text-xl">KrishiShakti</span>
+        {/* <Image src={"./chart-donut.svg"} alt="logo" width={40} height={25} /> */}
+        <span className="text-primary font-bold text-xl">🌱 KrishiShakti 🪴</span>
       </div>
       <div className="mt-5">
         {menuList.map((menu) => (
@@ -52,8 +52,8 @@ function Sidebar() {
                     text-gray-500 font-medium
                     mb-2
                     p-4 cursor-pointer rounded-full
-                    hover:text-primary hover:bg-blue-100
-                    ${path == menu.path && "text-primary bg-blue-100"}
+                    hover:text-primary hover:bg-green-100
+                    ${path == menu.path && "text-primary bg-green-100"}
                     `}
             >
               <menu.icon />

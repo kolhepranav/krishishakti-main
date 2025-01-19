@@ -106,7 +106,7 @@ function ExpandedCard({ param, setExpanded }) {
 
   return (
     <motion.div
-      className="ExpandedCard"
+      className="ExpandedCard z-0"
       style={{
         background: param.color.backGround,
         boxShadow: param.color.boxShadow,

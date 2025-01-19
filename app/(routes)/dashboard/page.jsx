@@ -11,8 +11,9 @@ import GoogleTranslate from "@/lib/GoogleTranslate";
 
 import { NotepadTextIcon } from "lucide-react";
 import MagicCard from "@/components/ui/magic-card";
-// import Card from "@/components/custom/_Charts/_Charts/Card/Card";
 import Cards from "./_components/Cards/Cards";
+import { TractorIcon } from "lucide-react";
+import MagicUIComponent from "./_components/MagicUIComponent";
 
 const DashboardPage = () => {
   const { isLoaded, isSignedIn, user } = useUser();
@@ -49,7 +50,7 @@ const DashboardPage = () => {
           <GoogleTranslate />
         </Card>
         <Card>
-          <div className="grid grid-cols-1 w-full p-2">
+          <div className="grid grid-cols-1 w-full p-2 relative z-10">
             <MapComponent />
           </div>
         </Card>
@@ -58,28 +59,8 @@ const DashboardPage = () => {
         <div className="">
           <Cards />
         </div>
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 w-full">
-          <MagicCard color="rgba(99,102,241,.08)" className="border-2 border-indigo-100 max-w-full w-full">
-            <Link href="/dashboard/health-tips" className="flex items-center justify-between w-full bg-background group p-4">
-              <div className="space-y-0.5">
-                <h5 className="font-medium font-heading text-indigo-500">Health tips</h5>
-                <p className="text-xs text-neutral-600">Get health tips and advice</p>
-              </div>
-              <NotepadTextIcon className="w-8 h-8 text-indigo-500 group-hover:scale-105 transition transform" />
-            </Link>
-          </MagicCard>
-
-          <MagicCard color="rgba(0, 255, 0, 0.08)" className="border-2 border-green-100 max-w-full w-full">
-            <Link href="/dashboard/summary" className="flex items-center justify-between w-full bg-background group p-4">
-              <div className="space-y-0.5">
-                <h5 className="font-medium font-heading text-green-500">Summary</h5>
-                <p className="text-xs text-neutral-600">Get health tips and advice</p>
-              </div>
-              <NotepadTextIcon className="w-8 h-8 text-green-500 group-hover:scale-105 transition transform" />
-            </Link>
-          </MagicCard>
-        </div>
-
+        
+        <MagicUIComponent />
         <p className="text-lg p-1 font-semibold -mb-4 text-purple-600">KrishiMitra: Your Smart Agriculture Assistant</p>
         <Card className="border hover:border-primary">
           <div className="grid grid-cols-1 w-full">
