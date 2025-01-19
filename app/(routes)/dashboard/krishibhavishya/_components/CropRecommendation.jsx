@@ -72,7 +72,9 @@ export default function CropPredictionForm() {
     formData.append("area", JSON.stringify(data.area));
     formData.append("username", JSON.stringify("temp2"));
 
-    fetch("http://127.0.0.1:8000/predictCrop", {
+    const API_URL_DEPLOY = process.env.NEXT_PUBLIC_ML_API_URL;
+
+    fetch(`${API_URL_DEPLOY}/predictCrop`, {
       method: "POST",
       body: formData,
     })

@@ -13,6 +13,7 @@ const CropPredictions = () => {
 
   // Initialize the Gemini API
   const GEMINI_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+  const API_URL_DEPLOY = process.env.NEXT_PUBLIC_ML_API_URL;
 
   const genAI = new GoogleGenerativeAI(GEMINI_KEY);
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
@@ -45,8 +46,10 @@ const CropPredictions = () => {
     const formData = new FormData();
     formData.append("username", JSON.stringify("temp2"));
 
+
+
     // Fetch crop and yield predictions from the backend
-    fetch("http://127.0.0.1:8000/getPredictedCrops", {
+    fetch(`${API_URL_DEPLOY}/getPredictedCrops`, {
       method: "POST",
       body: formData,
     })

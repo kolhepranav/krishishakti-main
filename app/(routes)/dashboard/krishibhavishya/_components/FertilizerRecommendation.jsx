@@ -79,10 +79,12 @@ export default function FertilizerRecommendationForm() {
     formData.append("p", JSON.stringify(data.phosphorous));
     formData.append("k", JSON.stringify(data.potassium));
     formData.append("crop", JSON.stringify(data.crop.toLowerCase()));
+
     formData.append("username", JSON.stringify("temp2"));
+    const API_URL_DEPLOY = process.env.NEXT_PUBLIC_ML_API_URL;
    
     console.log(data)
-    fetch("http://127.0.0.1:8000/predictFertilizer", {
+    fetch(`${API_URL_DEPLOY}/predictFertilizer`, {
       
       method: "POST",
       body: formData,

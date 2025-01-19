@@ -17,13 +17,14 @@ const PlantDiseasePrediction = () => {
   const GEMINI_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
   const genAI = new GoogleGenerativeAI(GEMINI_KEY);
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const API_URL_DEPLOY = process.env.NEXT_PUBLIC_ML_API_URL;
 
   // Fetch plant disease prediction data on component mount
   useEffect(() => {
     const formData = new FormData();
     formData.append("username", JSON.stringify("temp2"));
 
-    fetch("http://127.0.0.1:8000/getPredictedDisease", {
+    fetch(`${API_URL_DEPLOY}/getPredictedDisease`, {
       method: "POST",
       body: formData,
     })

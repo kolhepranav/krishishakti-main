@@ -15,10 +15,12 @@ const MapComponent = () => {
     const [properties, setProperties] = useState([]);
     const [loading, setLoading] = useState(false);
 
+    const API_URL_DEPLOY = process.env.NEXT_PUBLIC_ML_API_URL;
+
     const fetchFarmData = async () => {
         try {
             setLoading(true);
-            const response = await fetch(`http://localhost:8000/get-farms/${user?.id}`, {
+            const response = await fetch(`${API_URL_DEPLOY}/get-farms/${user?.id}`, {
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json',

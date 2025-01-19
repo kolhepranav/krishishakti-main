@@ -67,6 +67,8 @@ const MagicUIComponent = () => {
     userId: "",
   });
 
+  const API_URL_DEPLOY = process.env.NEXT_PUBLIC_ML_API_URL;
+
   useEffect(() => {
     if (isLoaded && isSignedIn && user) {
       setForm((prevForm) => ({
@@ -105,7 +107,7 @@ const MagicUIComponent = () => {
         return;
       }
 
-      const response = await fetch("http://127.0.0.1:8000/register-farms", {
+      const response = await fetch(`${API_URL_DEPLOY}/register-farms`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userId: form.userId, farms }),

@@ -32,10 +32,12 @@ export default function PlantDiseasePrediction() {
 
       // Here, you would send the tensor to your prediction API
       // For demonstration purposes, let's assume we get some dummy results
+
+      const API_URL_DEPLOY = process.env.NEXT_PUBLIC_ML_API_URL;
       const formData = new FormData();
       formData.append("image", files[0]);
       formData.append("username", JSON.stringify("temp2"));
-      fetch("http://127.0.0.1:8000/predictDisease", {
+      fetch(`${API_URL_DEPLOY}/predictDisease`, {
         method: "POST",
         body: formData,
       })

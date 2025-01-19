@@ -19,6 +19,8 @@ const FertilizerRecommendationForm = () => {
   const genAI = new GoogleGenerativeAI(GEMINI_KEY);
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
+  const API_URL_DEPLOY = process.env.NEXT_PUBLIC_ML_API_URL;
+
   const LoadingSkeleton = () => (
     <div className="space-y-4">
       <Skeleton className="h-4 w-3/4" />
@@ -46,7 +48,7 @@ const FertilizerRecommendationForm = () => {
     formData.append("username", JSON.stringify("temp2"));
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/getPredictedFertilizers", {
+      const response = await fetch(`${API_URL_DEPLOY}/getPredictedFertilizers`, {
         method: "POST",
         body: formData,
       });
