@@ -42,7 +42,7 @@ function Sidebar() {
     <div className="h-screen p-5 border shadow-sm">
       <div className="flex flex-row items-center">
         {/* <Image src={"./chart-donut.svg"} alt="logo" width={40} height={25} /> */}
-        <span className="text-primary font-bold text-xl">🌱 KrishiShakti 🪴</span>
+        <span className="text-primary font-bold text-2xl">🌱 KrishiShakti 🪴</span>
       </div>
       <div className="mt-5">
         {menuList.map((menu) => (
