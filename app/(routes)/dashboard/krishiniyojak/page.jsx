@@ -79,12 +79,11 @@ function Dashboard() {
 
   return (
     <div className="p-8 bg-">
-      <h2 className="font-bold text-4xl">Hi, {user?.fullName} 👋</h2>
       <p className="text-gray-500">
         Here's what happenning with your money, Lets Manage your expense
       </p>
 
-      <CardInfo budgetList={budgetList} incomeList={incomeList} />
+      <CardInfo budgetList={budgetList} incomeList={incomeList}/>
       <div className="grid grid-cols-1 lg:grid-cols-3 mt-6 gap-5">
         <div className="lg:col-span-2">
           <BarChartDashboard budgetList={budgetList} />

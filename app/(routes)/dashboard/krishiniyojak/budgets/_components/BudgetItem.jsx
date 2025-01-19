@@ -10,7 +10,7 @@ function BudgetItem({ budget }) {
     <Link href={"/dashboard/krishiniyojak/expenses/" + budget?.id}>
       <div
         className="p-5 border rounded-2xl
-    hover:shadow-md cursor-pointer h-[170px]"
+    hover:shadow-md cursor-pointer h-[170px] hover:border-primary"
       >
         <div className="flex gap-2 items-center justify-between">
           <div className="flex gap-2 items-center">
@@ -26,7 +26,7 @@ function BudgetItem({ budget }) {
               <h2 className="text-sm text-gray-500">{budget.totalItem} Item</h2>
             </div>
           </div>
-          <h2 className="font-bold text-primary text-lg"> ${budget.amount}</h2>
+          <h2 className="font-bold text-primary text-lg"> ₹{budget.amount}</h2>
         </div>
 
         <div className="mt-5">

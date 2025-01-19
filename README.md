@@ -4,7 +4,7 @@
       <img src="https://i.postimg.cc/tJsYLQcP/test1.jpg" alt="Project Banner">
     </a>
   
-  <br  />
+  <br />
 
   <div>
     <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
@@ -73,51 +73,153 @@ Make sure you have the following installed on your machine:
 
 **Cloning the Repository**
 
-```bash
-git clone https://github.com/mendsalbert/ai-finance-trackingt.git
-cd ai-finance-tracking
+   ```bash
+   git clone https://github.com/KaranGulve4342/krishishakti.git
+   cd krishishakti
+   ```
+
+2. **Install Dependencies:**
+
+   Using npm:
+
+   ```bash
+   npm install
+   ```
+
+   Using Yarn:
+
+   ```bash
+   yarn install
+   ```
+
+### Configuration
+
+1. **Environment Variables:**
+
+   Create a `.env.local` file in the root directory and add the following environment variables:
+
+   ```env
+   NEXT_PUBLIC_DATABASE_URL=your_neondb_connection_string
+   CLERK_API_KEY=your_clerk_api_key
+   NEXT_PUBLIC_API_URL=your_backend_api_url
+   ```
+
+2. **Database Setup:**
+
+   Ensure your NeonDB database is set up and the connection string is correctly configured in the `.env.local` file.
+
+3. **Drizzle ORM Configuration:**
+
+   Ensure `drizzle.config.js` is correctly set up in the project root.
+
+### Running the Project
+
+1. **Start the Development Server:**
+
+   Using npm:
+
+   ```bash
+   npm run dev
+   ```
+
+   Using Yarn:
+
+   ```bash
+   yarn dev
+   ```
+
+2. **View the Application:**
+
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+krishishakti/
+|
+├── app/
+│   └── (routes)/
+│       └── dashboard/
+│           ├── _components/
+│           │   ├── SideNav.jsx
+│           │   ├── Header.jsx
+│           │   ├── CropRecommendation.jsx
+│           │   ├── FertilizerRecommendation.jsx
+│           │   └── DiseasePrediction.jsx
+│           ├── krishiniyojak/
+│           │   └── page.jsx
+│           └── krishirakshak/
+│               └── page.jsx
+│
+├── components/
+│   └── ui/
+│       ├── button.jsx
+│       ├── dropdown-menu.jsx
+│       └── tabs.jsx
+│
+├── lib/
+│   └── GoogleTranslate.js
+│
+├── public/
+│   └── chart-donut.svg
+│
+├── styles/
+│   └── globals.css
+│
+├── utils/
+│   ├── dbConfig.jsx
+│   └── schema.jsx
+│
+├── .env.local
+├── package.json
+├── drizzle.config.js
+├── README.md
+└── next.config.js
 ```
 
-**Installation**
+## Scripts
 
-Install the project dependencies using npm:
+- **`dev`**: Runs the application in development mode.
+- **`build`**: Builds the application for production.
+- **`start`**: Starts the production server.
+- **`lint`**: Runs ESLint to check for code quality issues.
+- **`db:push`**: Pushes database schema changes using Drizzle Kit.
+- **`db:studio`**: Launches Drizzle Kit Studio for database management.
 
-```bash
-npm install
-```
+## Usage
 
-**Set Up Environment Variables**
+### Navigation
 
-Create a new file named `.env` in the root of your project and add the following content:
+- **Sidebar:** Accessible on all dashboard pages for seamless navigation between different sections like Dashboard, Incomes, Budgets, Expenses, and Upgrade.
+- **Header:** Displays user information and a responsive menu for accessing different features.
 
-```env
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=p
-CLERK_SECRET_KEY=
+### Features
 
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
-NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
-NEXT_PUBLIC_OPENAI_API_KEY=
+- **Crop Recommendation:** Navigate to the Crop Recommendation tab to get intelligent suggestions for crops based on your input data.
+- **Fertilizer Recommendation:** Access fertilizer optimization tools to enhance crop yield and soil health.
+- **Disease Prediction:** Utilize the Disease Prediction feature to identify and manage plant diseases early.
 
-NEXT_PUBLIC_DATABASE_URL=
+## Contributing
 
-```
+We welcome contributions to KrishiShakti! If you have suggestions, bug reports, or would like to contribute code, please follow these steps:
 
-Replace the placeholder values with your actual OpenAI credentials. You can obtain these credentials by signing up on the [OpenAI website](https://openai.com/).
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix:
 
-**Running the Project**
+   ```bash
+   git checkout -b feature-name
+   ```
 
-```bash
-npm run dev
-```
+3. Commit your changes:
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
+   ```bash
+   git commit -m "Description of changes"
+   ```
 
-## <a name="snippets">🕸️ Assets & Code</a>
+4. Push to your branch:
 
-The repository includes all the assets and code you need to get started with Finan Smart. Follow along with our YouTube tutorial for a step-by-step guide.
+   ```bash
+   git push origin feature-name
+   ```
 
-## <a name="more">🚀 More</a>
-
-For more information and additional resources, check out our YouTube channel and join our Discord community for support and discussions.
+5. Submit a pull request.

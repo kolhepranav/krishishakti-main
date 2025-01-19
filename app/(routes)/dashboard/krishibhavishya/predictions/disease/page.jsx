@@ -75,7 +75,7 @@ const PlantDiseasePrediction = () => {
         },
         "economics": {
           "estimatedLoss": "loss estimate",
-          "treatmentCost": "cost range",
+          "treatmentCost": "cost range in INR",
           "recoveryTime": "recovery period"
         },
         "recommendations": ["recommendation1", "recommendation2"]
