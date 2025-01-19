@@ -15,7 +15,7 @@ function MarketingPage() {
           {/* Pro Plan */}
           <div className="rounded-2xl border border-gray-200 mx-auto p-6 shadow-sm sm:px-8 lg:p-12">
             <div className="text-center">
-              <h2 className="text-lg font-medium text-gray-900">Starter Plan</h2>
+              <h2 className="text-lg font-medium text-gray-900">Free Plan</h2>
 
               <p className="mt-2 sm:mt-4">
                 <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -23,7 +23,6 @@ function MarketingPage() {
                 </strong>
 
                 <span className="text-sm font-medium text-gray-700">/month</span>
-                <p>Free</p>
               </p>
               <p></p>
             </div>
@@ -45,7 +44,7 @@ function MarketingPage() {
                   />
                 </svg>
 
-                <span className="text-gray-700"> 50 crop analyses per month </span>
+                <span className="text-gray-700"> 10 crop analyses per month </span>
               </li>
 
               <li className="flex items-center gap-1">
@@ -83,26 +82,7 @@ function MarketingPage() {
                   />
                 </svg>
 
-                <span className="text-gray-700"> Email support </span>
-              </li>
-
-              <li className="flex items-center gap-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6 text-green-700"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4.5 12.75l6 6 9-13.5"
-                  />
-                </svg>
-
-                <span className="text-gray-700"> Weather data integration </span>
+                <span className="text-gray-700">Basic Weather data integration </span>
               </li>
             </ul>
 
@@ -117,7 +97,7 @@ function MarketingPage() {
           <div className="rounded-2xl border border-green-600 mx-auto p-6 shadow-sm ring-1 ring-green-600 sm:px-8 lg:p-12">
             <div className="text-center">
               <h2 className="text-lg font-medium text-gray-900">
-                Premium Plan
+                Starter plan
               </h2>
 
               <p className="mt-2 sm:mt-4">
@@ -127,6 +107,127 @@ function MarketingPage() {
 
                 <span className="text-sm font-medium text-gray-700">/month</span>
               </p>
+            </div>
+
+            <ul className="mt-6 space-y-2">
+  <li className="flex items-center gap-1">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+      className="w-6 h-6 text-green-700"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M4.5 12.75l6 6 9-13.5"
+      />
+    </svg>
+
+    <span className="text-gray-700"> 50 crop analyses per month </span>
+  </li>
+
+  <li className="flex items-center gap-1">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+      className="w-6 h-6 text-green-700"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M4.5 12.75l6 6 9-13.5"
+      />
+    </svg>
+
+    <span className="text-gray-700"> Basic disease prediction </span>
+  </li>
+
+  <li className="flex items-center gap-1">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+      className="w-6 h-6 text-green-700"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M4.5 12.75l6 6 9-13.5"
+      />
+    </svg>
+
+    <span className="text-gray-700"> Generalized treatment recommendations </span>
+  </li>
+
+  <li className="flex items-center gap-1">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+      className="w-6 h-6 text-green-700"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M4.5 12.75l6 6 9-13.5"
+      />
+    </svg>
+
+    <span className="text-gray-700"> Email support </span>
+  </li>
+
+  <li className="flex items-center gap-1">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+      className="w-6 h-6 text-green-700"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M4.5 12.75l6 6 9-13.5"
+      />
+    </svg>
+
+    <span className="text-gray-700"> Limited weather integration </span>
+  </li>
+</ul>
+
+
+            <a
+              href="#"
+              className="mt-8 block rounded-full border border-green-600 bg-green-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-green-700 hover:ring-1 hover:ring-green-700 focus:outline-none focus:ring active:text-green-500"
+            >
+              Get Started
+            </a>
+          </div>
+
+          {/* Starter Plan */}
+          <div className="rounded-2xl border border-gray-200 mx-auto p-6 shadow-sm sm:px-8 lg:p-12">
+            <div className="text-center">
+              <h2 className="text-lg font-medium text-gray-900">Premium Plan</h2>
+
+              <p className="mt-2 sm:mt-4">
+                <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
+                  ₹199
+                </strong>
+
+                <span className="text-sm font-medium text-gray-700">/month</span>
+              </p>
+              <p></p>
             </div>
 
             <ul className="mt-6 space-y-2">
@@ -223,108 +324,6 @@ function MarketingPage() {
                 </svg>
 
                 <span className="text-gray-700"> Advanced weather integration </span>
-              </li>
-            </ul>
-
-            <a
-              href="#"
-              className="mt-8 block rounded-full border border-green-600 bg-green-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-green-700 hover:ring-1 hover:ring-green-700 focus:outline-none focus:ring active:text-green-500"
-            >
-              Get Started
-            </a>
-          </div>
-
-          {/* Starter Plan */}
-          <div className="rounded-2xl border border-gray-200 mx-auto p-6 shadow-sm sm:px-8 lg:p-12">
-            <div className="text-center">
-              <h2 className="text-lg font-medium text-gray-900">Starter Plan</h2>
-
-              <p className="mt-2 sm:mt-4">
-                <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                  ₹0
-                </strong>
-
-                <span className="text-sm font-medium text-gray-700">/month</span>
-                <p>Free</p>
-              </p>
-              <p></p>
-            </div>
-
-            <ul className="mt-6 space-y-2">
-              <li className="flex items-center gap-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6 text-green-700"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4.5 12.75l6 6 9-13.5"
-                  />
-                </svg>
-
-                <span className="text-gray-700"> 50 crop analyses per month </span>
-              </li>
-
-              <li className="flex items-center gap-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6 text-green-700"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4.5 12.75l6 6 9-13.5"
-                  />
-                </svg>
-
-                <span className="text-gray-700"> Basic disease prediction </span>
-              </li>
-
-              <li className="flex items-center gap-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6 text-green-700"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4.5 12.75l6 6 9-13.5"
-                  />
-                </svg>
-
-                <span className="text-gray-700"> Email support </span>
-              </li>
-
-              <li className="flex items-center gap-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6 text-green-700"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4.5 12.75l6 6 9-13.5"
-                  />
-                </svg>
-
-                <span className="text-gray-700"> Weather data integration </span>
               </li>
             </ul>
 
