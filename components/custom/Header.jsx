@@ -1,27 +1,3 @@
-// import { UserButton } from '@clerk/nextjs'
-// import React from 'react'
-// import { useUser } from '@clerk/nextjs';
-
-// function Header() {
-//   const { user } = useUser();
-
-//   const userFullName = user?.fullName;
-
-//   return (
-//     <div className='p-5 shadow-sm border-b flex justify-between'>
-//         <div>
-//         <h2 className="font-bold text-3xl text-gray-500">Hi, {userFullName} 👋</h2>
-//         </div>
-//         <div>
-//             <UserButton />
-//         </div>
-       
-//     </div>
-//   )
-// }
-
-// export default Header;
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -61,38 +37,59 @@ function Header() {
   return (
     <div className="p-5 border flex justify-between items-center">
       <div>
-        <h2 className="font-bold text-3xl text-gray-500">Hi, {userFullName} 👋</h2>
+      <h2 className="font-bold text-3xl text-gray-800">
+        Hi, {userFullName}{' '}
+        <span
+          className="inline-block animate-wave"
+          style={{
+            animation: 'wave 1.5s infinite',
+            transformOrigin: '70% 70%',
+          }}
+        >
+          👋
+        </span>
+</h2>
+
       </div>
       <div className="flex items-center space-x-4">
-
-      { isMobileScreen && <div>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="outline">Menu</Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56">
-            <DropdownMenuItem onClick={() => handleNavigation("/dashboard")} className="p-4 cursor-pointer rounded-full
-                    hover:text-primary hover:bg-green-100">
-              Dashboard
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => handleNavigation("/dashboard/krishibhavishya")} className="p-4 cursor-pointer rounded-full
-                    hover:text-primary hover:bg-green-100">
-              KrishiBhavishya
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => handleNavigation("/dashboard/krishirakshak")} className="p-4 cursor-pointer rounded-full
-                    hover:text-primary hover:bg-green-100">
-              KrishiRakshak
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => handleNavigation("/dashboard/krishiniyojak")} className="p-4 cursor-pointer rounded-full
-                    hover:text-primary hover:bg-green-100">
-              KrishiNiyojak
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </div>}
-      <div>
-        <UserButton />
-      </div>
+        {isMobileScreen && (
+          <div>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline">Menu</Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56">
+                <DropdownMenuItem
+                  onClick={() => handleNavigation("/dashboard")}
+                  className="p-4 cursor-pointer rounded-full hover:text-primary hover:bg-green-100"
+                >
+                  Dashboard
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => handleNavigation("/dashboard/krishibhavishya")}
+                  className="p-4 cursor-pointer rounded-full hover:text-primary hover:bg-green-100"
+                >
+                  KrishiBhavishya
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => handleNavigation("/dashboard/krishirakshak")}
+                  className="p-4 cursor-pointer rounded-full hover:text-primary hover:bg-green-100"
+                >
+                  KrishiRakshak
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => handleNavigation("/dashboard/krishiniyojak")}
+                  className="p-4 cursor-pointer rounded-full hover:text-primary hover:bg-green-100"
+                >
+                  KrishiNiyojak
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+        )}
+        <div>
+          <UserButton />
+        </div>
       </div>
     </div>
   );

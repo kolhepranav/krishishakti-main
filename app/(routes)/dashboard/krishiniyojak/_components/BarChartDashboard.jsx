@@ -11,7 +11,7 @@ import {
 
 function BarChartDashboard({ budgetList }) {
   return (
-    <div className="border rounded-2xl p-5">
+    <div className="border rounded-2xl p-5 shadow-md hover:border-primary">
       <h2 className="font-bold text-lg">Activity</h2>
       <ResponsiveContainer width={"80%"} height={300}>
         <BarChart
