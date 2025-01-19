@@ -51,13 +51,13 @@ const DashboardPage = () => {
           <GoogleTranslate />
         </Card>
         <Card className="bg-gray-50 hover:shadow-md rounded-xl border hover:border-primary">
-          <div className="grid grid-cols-1 w-full p-2 relative z-10">
+          <div className="grid grid-cols-1 w-full p-2 relative z-0">
             <MapComponent />
           </div>
         </Card>
       </div>
-      <div className="flex flex-col md:col-span-1 xl:col-span-8 gap-8 w-full ">
-        <div className="">
+      <div className="flex flex-col md:col-span-1 xl:col-span-8 gap-8  ">
+        <div className="z-10">
           <Cards />
         </div>
         

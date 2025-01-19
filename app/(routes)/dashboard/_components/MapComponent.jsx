@@ -61,7 +61,7 @@ const MapComponent = () => {
     }
 
     return (
-        <main className="flex flex-col items-center p-2">
+        <main className="flex flex-col items-center p-2 z-0">
               <LazyMap properties={properties} />
             </main>
     );
