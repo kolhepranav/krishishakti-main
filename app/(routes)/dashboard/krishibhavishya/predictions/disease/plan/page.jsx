@@ -106,23 +106,35 @@ const DiseasePlanPage = () => {
 
       {/* KPI Section */}
       {aiResponse && (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="shadow-md bg-red-300">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-9">
+          <Card className="shadow-md bg-gradient-to-r
+    from-green-50
+    via-green-100
+    to-lime-100
+    background-animate hover:border-primary">
             <CardContent className="flex flex-col items-center">
-              <h3 className="text-lg font-semibold text-gray-700 mt-3">Total Material Cost</h3>
-              <p className="text-2xl font-bold text-white">₹{aiResponse.crop_disease_management_plan.budget_summary.total_material_cost}</p>
+              <h3 className="text-lg font-semibold text-gray-700 mt-3 mb-3">Total Material Cost</h3>
+              <p className="text-2xl font-bold">₹{aiResponse.crop_disease_management_plan.budget_summary.total_material_cost}</p>
             </CardContent>
           </Card>
-          <Card className="shadow-md bg-red-300">
+          <Card className="shadow-md bg-gradient-to-r
+    from-green-50
+    via-green-100
+    to-lime-100
+    background-animate hover:border-primary">
             <CardContent className="flex flex-col items-center">
-              <h3 className="text-lg font-semibold text-gray-700 mt-3">Labor Cost</h3>
-              <p className="text-2xl font-bold text-white">₹{aiResponse.crop_disease_management_plan.budget_summary.labor_cost}</p>
+              <h3 className="text-lg font-semibold text-gray-700 mt-3 mb-3">Labor Cost</h3>
+              <p className="text-2xl font-bold ">₹{aiResponse.crop_disease_management_plan.budget_summary.labor_cost}</p>
             </CardContent>
           </Card>
-          <Card className="shadow-md bg-red-300">
+          <Card className="shadow-md bg-gradient-to-r
+    from-green-50
+    via-green-100
+    to-lime-100
+    background-animate hover:border-primary">
             <CardContent className="flex flex-col items-center">
-              <h3 className="text-lg font-semibold text-gray-700 mt-3">Total Budget</h3>
-              <p className="text-2xl font-bold text-white">₹{aiResponse.crop_disease_management_plan.budget_summary.total_budget}</p>
+              <h3 className="text-lg font-semibold text-gray-700 mt-3 mb-3">Total Budget</h3>
+              <p className="text-2xl font-bold ">₹{aiResponse.crop_disease_management_plan.budget_summary.total_budget}</p>
             </CardContent>
           </Card>
         </div>

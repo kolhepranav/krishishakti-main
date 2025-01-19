@@ -42,11 +42,11 @@ function CompactCard({ param, setExpanded }) {
     >
       <div className="radialBar">
         <CircularProgressbar value={param.barValue} text={`${param.barValue}%`} />
-        <span>{param.title}</span>
+        {/* <span>{param.title}</span> */}
       </div>
       <div className="detail">
         <Png style={{fontSize : "25px"}} />
-        <span className="text_size_card">${param.value}</span>
+        <span className="text_size_card"> {param.value}</span>
         <span></span>
       </div>
     </motion.div>
