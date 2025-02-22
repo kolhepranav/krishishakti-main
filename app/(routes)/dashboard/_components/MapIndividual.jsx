@@ -7,7 +7,7 @@ import "leaflet-defaulticon-compatibility";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 export default function MapIndividual({ coordinates }) {
-  const position = [parseFloat(coordinates.latitude), parseFloat(coordinates.longitude)];
+  const position = [parseFloat(18.5302), parseFloat(73.8545)];
 
   return (
     <MapContainer
