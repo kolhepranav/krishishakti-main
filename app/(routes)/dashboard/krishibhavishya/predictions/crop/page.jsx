@@ -62,8 +62,9 @@ const CropPredictions = () => {
         setYieldP(adjustedYield);
         console.log("Original yield:", data.yield_prediction);
         console.log("Adjusted yield:", adjustedYield);
+        console.log("Crop prediction:", data.crop_prediction);
         // Send the data to Gemini for enhancement
-        enhanceOutputWithGemini(data.crop_prediction, adjustedYield);
+        enhanceOutputWithGemini(data.crop_prediction, data.crop_prediction);
       })
       .catch((error) => {
         console.error("Error during fetch operation:", error);
