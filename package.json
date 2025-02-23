@@ -9,11 +9,13 @@
     "lint": "next lint",
     "db:push": "drizzle-kit push",
     "db:studio": "npx drizzle-kit studio"
-    
-    
   },
   "dependencies": {
     "@clerk/nextjs": "^6.9.12",
+    "@fullcalendar/core": "^6.1.15",
+    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/interaction": "^6.1.15",
+    "@fullcalendar/react": "^6.1.15",
     "@google/generative-ai": "^0.21.0",
     "@hookform/resolvers": "^3.10.0",
     "@iconscout/react-unicons": "^2.2.1",
