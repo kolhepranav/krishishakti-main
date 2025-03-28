@@ -48,7 +48,7 @@ export default function CropPredictionForm() {
       state: '',
       city: '',
       crop_year: '',
-      season: 'Whole Year',
+      season: 'Summer',
       area: ''
     },
     mode: 'onChange',
